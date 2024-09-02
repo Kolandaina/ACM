@@ -1,0 +1,10 @@
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/XJTUPC_2024.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/A.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/F.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/C.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/B.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/E.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/M.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/O.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug/CMakeFiles/rebuild_cache.dir

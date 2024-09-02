@@ -1,0 +1,7 @@
+D:/1-programme/source code/CLion/ACM/competition/JXPC_2024/cmake-build-debug/CMakeFiles/JXPC_2024.dir
+D:/1-programme/source code/CLion/ACM/competition/JXPC_2024/cmake-build-debug/CMakeFiles/A.dir
+D:/1-programme/source code/CLion/ACM/competition/JXPC_2024/cmake-build-debug/CMakeFiles/G.dir
+D:/1-programme/source code/CLion/ACM/competition/JXPC_2024/cmake-build-debug/CMakeFiles/K.dir
+D:/1-programme/source code/CLion/ACM/competition/JXPC_2024/cmake-build-debug/CMakeFiles/H.dir
+D:/1-programme/source code/CLion/ACM/competition/JXPC_2024/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/1-programme/source code/CLion/ACM/competition/JXPC_2024/cmake-build-debug/CMakeFiles/rebuild_cache.dir

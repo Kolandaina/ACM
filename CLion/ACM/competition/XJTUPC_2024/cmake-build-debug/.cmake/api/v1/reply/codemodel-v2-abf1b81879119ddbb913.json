@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "XJTUPC_2024",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "A::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-A-Debug-629989262d7ed31a084c.json",
+					"name" : "A",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "B::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-B-Debug-6b300db3873d97249225.json",
+					"name" : "B",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "C::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C-Debug-61e16c1fea6a752ed4f9.json",
+					"name" : "C",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "E::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-E-Debug-d7cc4eaa77632ce3129a.json",
+					"name" : "E",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "F::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-F-Debug-1648fed3ad42732c0410.json",
+					"name" : "F",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "M::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-M-Debug-e6dc2770608807649207.json",
+					"name" : "M",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "O::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-O-Debug-df99eb7b098a930a50f2.json",
+					"name" : "O",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "XJTUPC_2024::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-XJTUPC_2024-Debug-a52ced77c74959015874.json",
+					"name" : "XJTUPC_2024",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024/cmake-build-debug",
+		"source" : "D:/1-programme/source code/CLion/ACM/competition/XJTUPC_2024"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "The_22nd_SCU_Contest",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "C::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C-Debug-ca3b332ca59a30f544c9.json",
+					"name" : "C",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "E::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-E-Debug-b1dc149dff9307a1ca87.json",
+					"name" : "E",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-I-Debug-0a73944d80f943dbed5a.json",
+					"name" : "I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "J::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-J-Debug-9f0170f248282b8d733f.json",
+					"name" : "J",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "The_22nd_SCU_Contest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-The_22nd_SCU_Contest-Debug-8b09d6adc6361475e93d.json",
+					"name" : "The_22nd_SCU_Contest",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/1-programme/source code/CLion/ACM/competition/The 22nd SCU Contest/cmake-build-debug",
+		"source" : "D:/1-programme/source code/CLion/ACM/competition/The 22nd SCU Contest"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

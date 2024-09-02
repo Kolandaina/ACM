@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SHCPC_2024",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "A::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-A-Debug-629989262d7ed31a084c.json",
+					"name" : "A",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-I-Debug-0a73944d80f943dbed5a.json",
+					"name" : "I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SHCPC_2024::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SHCPC_2024-Debug-87480004868ad2ad0c2c.json",
+					"name" : "SHCPC_2024",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/1-programme/source code/CLion/ACM/competition/SHCPC_2024/cmake-build-debug",
+		"source" : "D:/1-programme/source code/CLion/ACM/competition/SHCPC_2024"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

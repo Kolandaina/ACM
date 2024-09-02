@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "5_31",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "5_31::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-5_31-Debug-9bae615513c322ca56da.json",
+					"name" : "5_31",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "F::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-F-Debug-7af55b8196b390ad64b0.json",
+					"name" : "F",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "H::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-H-Debug-7aecdc7788f61895db2e.json",
+					"name" : "H",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "J::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-J-Debug-250ddee68c297b2ebab4.json",
+					"name" : "J",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "K::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-K-Debug-d2109198c265b2f04e58.json",
+					"name" : "K",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test-Debug-a49f16a03b5d3ac66688.json",
+					"name" : "test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/1-programme/source code/CLion/ACM/competition/Sichuan Provincial Competition/5.31/cmake-build-debug",
+		"source" : "D:/1-programme/source code/CLion/ACM/competition/Sichuan Provincial Competition/5.31"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

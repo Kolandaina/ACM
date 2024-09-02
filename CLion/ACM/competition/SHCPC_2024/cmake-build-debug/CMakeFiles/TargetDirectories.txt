@@ -1,0 +1,5 @@
+D:/1-programme/source code/CLion/ACM/competition/SHCPC_2024/cmake-build-debug/CMakeFiles/SHCPC_2024.dir
+D:/1-programme/source code/CLion/ACM/competition/SHCPC_2024/cmake-build-debug/CMakeFiles/A.dir
+D:/1-programme/source code/CLion/ACM/competition/SHCPC_2024/cmake-build-debug/CMakeFiles/I.dir
+D:/1-programme/source code/CLion/ACM/competition/SHCPC_2024/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/1-programme/source code/CLion/ACM/competition/SHCPC_2024/cmake-build-debug/CMakeFiles/rebuild_cache.dir

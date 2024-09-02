@@ -1,0 +1,8 @@
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/Tree.dir
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/1.dir
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/2.dir
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/3.dir
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/4.dir
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/5.dir
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/1-programme/source code/CLion/ACM/Algorithm/Tree/cmake-build-debug/CMakeFiles/rebuild_cache.dir

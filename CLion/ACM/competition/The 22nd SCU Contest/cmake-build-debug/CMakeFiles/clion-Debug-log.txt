@@ -1,0 +1,4 @@
+"D:\1-programme\porgramme\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/1-programme/porgramme/CLion 2022.3/bin/ninja/win/ninja.exe" -G Ninja -S "D:\1-programme\source code\CLion\ACM\competition\The 22nd SCU Contest" -B "D:\1-programme\source code\CLion\ACM\competition\The 22nd SCU Contest\cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/1-programme/source code/CLion/ACM/competition/The 22nd SCU Contest/cmake-build-debug

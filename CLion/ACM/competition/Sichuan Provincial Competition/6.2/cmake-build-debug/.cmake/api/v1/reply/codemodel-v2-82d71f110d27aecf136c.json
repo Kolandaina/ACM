@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "6_2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "6_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-6_2-Debug-db614b7dc4659b0a6f77.json",
+					"name" : "6_2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "A::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-A-Debug-629989262d7ed31a084c.json",
+					"name" : "A",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "B::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-B-Debug-6eff51efa1b76850c6e1.json",
+					"name" : "B",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "C::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C-Debug-355d82e2dd3f5381013f.json",
+					"name" : "C",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "D::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-D-Debug-70f2e795ff02c80203e5.json",
+					"name" : "D",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "E::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-E-Debug-2da142d38c826c0bc59d.json",
+					"name" : "E",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "F::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-F-Debug-b340b7ae11f494d01b38.json",
+					"name" : "F",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "G::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-G-Debug-b69eef9849ecdd9c97a2.json",
+					"name" : "G",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "H::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-H-Debug-d7776e825f3311ab0e0f.json",
+					"name" : "H",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "I::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-I-Debug-57770aadfab1654d618e.json",
+					"name" : "I",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "J::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-J-Debug-dc614eba731d7ddfd3f4.json",
+					"name" : "J",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/1-programme/source code/CLion/ACM/competition/Sichuan Provincial Competition/6.2/cmake-build-debug",
+		"source" : "D:/1-programme/source code/CLion/ACM/competition/Sichuan Provincial Competition/6.2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
