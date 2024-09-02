@@ -9,29 +9,21 @@ const int INF = INT64_MAX;
 inline void solve() {
     int n;
     std::cin >> n;
-    std::vector<std::vector<int>> g(n + 1);
-    for (int i = 1; i < n; i++) {
-        int u, v;
-        std::cin >> u >> v;
-        g[u].push_back(v);
-        g[v].push_back(u);
-    }
-    int ans = 0;
-    std::vector<int> size(n + 1);
-    std::function<void(int, int)> dfs = [&](int u, int fa) {
-        size[u] = 1;
-        for (auto v : g[u]) {
-            if (v == fa) continue;
-            dfs(v, u);
-            size[u] += size[v];
-        }
-    };
-    dfs(1, 0);
+    std::vector<int> a(n + 1), ans(n + 1);
+    for (int i = 1; i <= n; i++) std::cin >> a[i];
+    std::sort(a.begin() + 1, a.end());
+    int pos1 = 1, pos2 = n / 2 + 1;
+    int sum = 0;
     for (int i = 1; i <= n; i++) {
-        if (size[i] == 1)ans++;
+        if (i % 2 == 0)ans[i] = a[pos1++];
+        else ans[i] = a[pos2++];
     }
-    if (n == 2)std::cout << 2 << endl;
-    else std::cout << ans << endl;
+    for (int i = 1; i < n; i++) {
+        if (ans[i] < ans[i - 1] && ans[i] < ans[i + 1]) sum++;
+    }
+    std::cout << sum << endl;
+    for (int i = 1; i <= n; i++) std::cout << ans[i] << " ";
+    std::cout << endl;
 }
 signed main() {
     std::ios_base::sync_with_stdio(false);
