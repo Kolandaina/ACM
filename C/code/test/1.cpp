@@ -1,36 +1,35 @@
 #include<bits/stdc++.h>
-#include<functional>
-#define int long long
-#define endl "\n"
-const int N = 2e5 + 10;
-const int mod = 1e9 + 7;
-const int INF = INT64_MAX;
-#define fs(x) std::fixed << std::setprecision(x)
-inline void solve() {
-    int n;
-    std::cin >> n;
-    std::vector<int> a(n + 1), ans(n + 1);
-    for (int i = 1; i <= n; i++) std::cin >> a[i];
-    std::sort(a.begin() + 1, a.end());
-    int pos1 = 1, pos2 = n / 2 + 1;
-    int sum = 0;
-    for (int i = 1; i <= n; i++) {
-        if (i % 2 == 0)ans[i] = a[pos1++];
-        else ans[i] = a[pos2++];
+using namespace std;
+int n, t, sum, b[10005], a[10005];
+int main() {
+    scanf("%d", &t);
+    while (t--) {
+        sum = 0;
+        memset(a, 0, sizeof(a));
+        memset(b, 0, sizeof(b));
+        scanf("%d", &n);
+        for (int i = 1; i <= n; i++)
+            scanf("%d", &a[i]), sum += a[i], b[i] = a[i] % i;
+        if (sum % n != 0) {
+            printf("-1\n");
+            continue;
+        }
+        printf("%d\n", 3 * (n - 1));
+        for (int i = 2; i <= n; i++) {
+            printf("1 %d %d\n", i, (i - b[i]) % i);
+            if (a[i] % i != 0) {
+                a[1] = a[1] - ((i - b[i]) % i);
+                a[i] = a[i] + ((i - b[i]) % i);
+            }
+            printf("%d 1 %d\n", i, a[i] / i);
+            a[1] = a[1] + a[i];
+            a[i] = 0;
+        }
+        for (int i = 2; i <= n; i++) {
+            printf("1 %d %d\n", i, sum / n);
+            a[1] -= sum / n;
+            a[i] = sum / n;
+        }
     }
-    for (int i = 1; i < n; i++) {
-        if (ans[i] < ans[i - 1] && ans[i] < ans[i + 1]) sum++;
-    }
-    std::cout << sum << endl;
-    for (int i = 1; i <= n; i++) std::cout << ans[i] << " ";
-    std::cout << endl;
-}
-signed main() {
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    std::cout.tie(nullptr);
-    int t = 1;
-    // std:: cin >> t;
-    while (t--) solve();
     return 0;
 }
