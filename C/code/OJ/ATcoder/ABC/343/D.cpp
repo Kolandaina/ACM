@@ -1,6 +1,11 @@
-#include <bits/stdc++.h>
-
-using i64 = long long;
+#include<bits/stdc++.h>
+#include<functional>
+#define int long long
+#define endl "\n"
+const int N = 2e5 + 10;
+const int mod = 1e9 + 7;
+const int INF = INT64_MAX;
+#define fs(x) std::fixed << std::setprecision(x)
 template<class Info>
 struct SegmentTree {
     int n;
@@ -64,53 +69,13 @@ struct SegmentTree {
     Info rangeQuery(int l, int r) {
         return rangeQuery(1, 0, n, l, r);
     }
-    template<class F>
-    int findFirst(int p, int l, int r, int x, int y, F pred) {
-        if (l >= y || r <= x || !pred(info[p])) {
-            return -1;
-        }
-        if (r - l == 1) {
-            return l;
-        }
-        int m = (l + r) / 2;
-        int res = findFirst(2 * p, l, m, x, y, pred);
-        if (res == -1) {
-            res = findFirst(2 * p + 1, m, r, x, y, pred);
-        }
-        return res;
-    }
-    template<class F>
-    int findFirst(int l, int r, F pred) {
-        return findFirst(1, 0, n, l, r, pred);
-    }
-    template<class F>
-    int findLast(int p, int l, int r, int x, int y, F pred) {
-        if (l >= y || r <= x || !pred(info[p])) {
-            return -1;
-        }
-        if (r - l == 1) {
-            return l;
-        }
-        int m = (l + r) / 2;
-        int res = findLast(2 * p + 1, m, r, x, y, pred);
-        if (res == -1) {
-            res = findLast(2 * p, l, m, x, y, pred);
-        }
-        return res;
-    }
-    template<class F>
-    int findLast(int l, int r, F pred) {
-        return findLast(1, 0, n, l, r, pred);
-    }
 };
-
 struct Info {
     int mx1 = -1;
     int cnt1 = 0;
     int mx2 = -2;
     int cnt2 = 0;
 };
-
 Info operator+(Info a, Info b) {
     if (a.mx1 == b.mx1) {
         if (a.mx2 < b.mx2) {
@@ -133,34 +98,34 @@ Info operator+(Info a, Info b) {
     }
     return a;
 }
-
-int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-    int N, Q;
-    std::cin >> N >> Q;
-    std::vector<int> A(N);
-    for (int i = 0; i < N; i++) {
-        std::cin >> A[i];
+inline void solve() {
+    int n, q;
+    std::cin >> n >> q;
+    std::vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> a[i];
     }
     SegmentTree<Info> seg(N);
-    for (int i = 0; i < N; i++) {
-        seg.modify(i, Info{A[i], 1, -1, 0});
+    for (int i = 0; i < n; i++) {
+        seg.modify(i, Info{a[i], 1, -1, 0});
     }
-    while (Q--) {
-        int o;
-        std::cin >> o;
-        if (o == 1) {
-            int p, x;
-            std::cin >> p >> x;
-            p--;
-            seg.modify(p, {x, 1, -1, 0});
+    while (q--) {
+        int op, x, y;
+        std::cin >> op >> x >> y;
+        x--;
+        if (op == 1) {
+            seg.modify(x, Info{y, 1, -1, 0});
         } else {
-            int l, r;
-            std::cin >> l >> r;
-            l--;
-            std::cout << seg.rangeQuery(l, r).cnt2 << "\n";
+            std::cout << seg.rangeQuery(x, y).cnt2 << endl;
         }
     }
+}
+signed main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    int t = 1;
+    // std:: cin >> t;
+    while (t--) solve();
     return 0;
 }
