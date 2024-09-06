@@ -76,8 +76,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug",
-		"source" : "C:/Users/ACM-04/OneDrive/sourcecode/CLion/test"
+		"build" : "D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug",
+		"source" : "D:/1-porgramme/sourcecode/CLion/test"
 	},
 	"version" : 
 	{

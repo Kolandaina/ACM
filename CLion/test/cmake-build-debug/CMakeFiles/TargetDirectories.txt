@@ -1,6 +1,6 @@
-C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/test.dir
-C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/1.dir
-C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/2.dir
-C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/3.dir
-C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/test.dir
+D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/1.dir
+D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/2.dir
+D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/3.dir
+D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/rebuild_cache.dir

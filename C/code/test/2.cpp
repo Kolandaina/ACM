@@ -1,36 +1,33 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include<vector>
+#include<deque>
 using namespace std;
-using LL = long long;
-const int mod = 20220911;
 int main() {
-    ios::sync_with_stdio(false); cin.tie(0);
-    string s;
-    getline(cin, s);
-    int n = s.size();
-    vector <string> a;
-    for (int i = 0; i < n; i ++) {
-        if (s[i] == ' ') continue;
-        string t = "";
-        for (; i < n && s[i] != ' '; i ++)
-            t = t + s[i];
-        a.push_back(t);
-    }
-    int m = a.size();
-    vector <LL> b;
-    b.push_back(0);
-    for (int i = 0; i < m; i ++) {
-        if (a[i] == "library") {
-            b.back() = (b.back() + 1) % mod;
-        } else if (a[i] == "repeat") {
-            b.push_back(0);
-        } else if ('0' <= a[i][0] && a[i][0] <= '9') {
-            b.back() = b.back() * stoi(a[i]) % mod;
-        } else if (a[i] == "times") {
-            LL t = b.back();
-            b.pop_back();
-            b.back() = (b.back() + t) % mod;
+    int t;
+    cin >> t;
+    while (t--) {
+        int m = 12;
+        int a, b;
+        int now[4] = {0, 2, 3, 4};
+        deque<int> v[20];
+        for (int i = 1; i <= 3; i++)
+            v[now[i]].push_back(i);
+        while (m--) {
+            cin >> a >> b;
+            int flag = 0;
+            deque<int> &t = v[now[a]];
+            deque<int> u;
+            while (t.back() != a)
+                u.push_front(t.back()), now[t.back()] += b, t.pop_back();
+            u.push_front(t.back()), now[t.back()] += b, t.pop_back();
+            while (!v[now[a]].empty()) {
+                u.push_front(v[now[a]].back());
+                v[now[a]].pop_back();
+            }
+            v[now[a]] = u;
         }
+        if (v[9].size() == 3) cout << "Y" << endl;
+        else cout << "N" << endl;
     }
-    cout << b.back() << "\n";
     return 0;
 }

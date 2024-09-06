@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug"
+			"value" : "d:/1-porgramme/sourcecode/CLion/test/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/ACM-04/OneDrive/sourcecode/CLion/test"
+			"value" : "D:/1-porgramme/sourcecode/CLion/test"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1291,7 +1291,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/ACM-04/OneDrive/sourcecode/CLion/test/cmake-build-debug"
+			"value" : "D:/1-porgramme/sourcecode/CLion/test/cmake-build-debug"
 		},
 		{
 			"name" : "test_IS_TOP_LEVEL",
@@ -1315,7 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/ACM-04/OneDrive/sourcecode/CLion/test"
+			"value" : "D:/1-porgramme/sourcecode/CLion/test"
 		}
 	],
 	"kind" : "cache",
