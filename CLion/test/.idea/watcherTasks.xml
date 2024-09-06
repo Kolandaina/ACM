@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectTasksOptions">
+    <TaskOptions isEnabled="true">
+      <option name="arguments" value="-n -i $FileName$ --style=allman --indent=spaces=4 --align-pointer=type --attach-closing-while --indent-col1-comments --pad-oper --pad-comma --pad-header --add-brackets --mode=c" />
+      <option name="checkSyntaxErrors" value="true" />
+      <option name="description" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value="cpp" />
+      <option name="immediateSync" value="true" />
+      <option name="name" value="my_format" />
+      <option name="output" value="$FileName$" />
+      <option name="outputFilters">
+        <array />
+      </option>
+      <option name="outputFromStdout" value="false" />
+      <option name="program" value="$PROJECT_DIR$/../../../IDE/AStyle/bin/AStyle" />
+      <option name="runOnExternalChanges" value="true" />
+      <option name="scopeName" value="Open Files" />
+      <option name="trackOnlyRoot" value="false" />
+      <option name="workingDir" value="$FileDir$" />
+      <envs />
+    </TaskOptions>
+  </component>
+</project>
