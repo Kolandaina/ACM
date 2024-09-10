@@ -6,94 +6,81 @@ const int N = 2e5 + 10;
 const int mod = 1e9 + 7;
 const int INF = INT64_MAX;
 #define fs(x) std::fixed << std::setprecision(x)
-using ld = long double;
-struct Point3 {
-    ld x, y, z;
-    Point3(ld x_ = 0, ld y_ = 0, ld z_ = 0) : x(x_), y(y_), z(z_) {}
-    Point3 &operator+=(Point3 p)& {
-        return x += p.x, y += p.y, z += p.z, *this;
+struct DSU {
+    std::vector<int> fa, p, e, f;
+    DSU(int n) {
+        fa.resize(n + 1);
+        std::iota(fa.begin(), fa.end(), 0);
+        p.resize(n + 1, 1);
+        e.resize(n + 1);
+        f.resize(n + 1);
     }
-    Point3 &operator-=(Point3 p)& {
-        return x -= p.x, y -= p.y, z -= p.z, *this;
-    }
-    Point3 &operator*=(Point3 p)& {
-        return x *= p.x, y *= p.y, z *= p.z, *this;
-    }
-    Point3 &operator*=(ld t)& {
-        return x *= t, y *= t, z *= t, *this;
-    }
-    Point3 &operator/=(ld t)& {
-        return x /= t, y /= t, z /= t, *this;
-    }
-    friend Point3 operator+(Point3 a, Point3 b) {
-        return a += b;
-    }
-    friend Point3 operator-(Point3 a, Point3 b) {
-        return a -= b;
-    }
-    friend Point3 operator*(Point3 a, Point3 b) {
-        return a *= b;
-    }
-    friend Point3 operator*(Point3 a, ld b) {
-        return a *= b;
-    }
-    friend Point3 operator*(ld a, Point3 b) {
-        return b *= a;
-    }
-    friend Point3 operator/(Point3 a, ld b) {
-        return a /= b;
-    }
-    friend auto &operator>>(std::istream &is, Point3 &p) {
-        return is >> p.x >> p.y >> p.z;
-    }
-    friend auto &operator<<(std::ostream &os, Point3 p) {
-        return os << "(" << p.x << ", " << p.y << ", " << p.z << ")";
-    }
-};
-struct Line3 {
-    Point3 a, b;
-};
-struct Plane {
-    Point3 u, v, w;
-};
-inline void solve() {
-    int n;
-    std::cin >> n;
-    std::string s;
-    std::cin >> s;
-    std::map<std::pair<int, int>, int> mp;
-    std::set<std::pair<int, int>> ans;
-    mp[ {0, 0}] = 1;
-    std::function<void(int, int, int)> dfs = [&](int x, int y, int cnt) {
-        if (cnt == n) {
-            ans.insert({x, y});
-            return;
+    int find(int x) {
+        while (x != fa[x]) {
+            x = fa[x] = fa[fa[x]];
         }
-        int dx = x, dy = y;
-        if (s[cnt] == 'R')dx++;
-        else if (s[cnt] == 'L') dx--;
-        else if (s[cnt] == 'U') dy++;
-        else dy--;
-        if (mp[ {dx, dy}] == 0) {
-            mp[ {dx, dy}] = 1;
-            dfs(dx, dy, cnt + 1);
-            mp[ {dx, dy}] = -1;
-            dfs(x, y, cnt + 1);
-            mp[ {dx, dy}] = 0;
-        } else if (mp[ {dx, dy}] == 1) {
-            dfs(dx, dy, cnt + 1);
-        } else dfs(x, y, cnt + 1);
-    };
-    dfs(0, 0, 0);
-    std::cout << ans.size() << endl;
-    for (auto &[x, y] : ans) std::cout << x << " " << y << endl;
+        return x;
+    }
+    bool merge(int x, int y) {
+        if (x == y) f[find(x)] = 1;
+        x = find(x), y = find(y);
+        e[x]++;
+        if (x == y) return false;
+        if (x < y) std::swap(x, y);
+        fa[y] = x;
+        f[x] |= f[y], p[x] += p[y], e[x] += e[y];
+        return true;
+    }
+    bool same(int x, int y) {
+        return find(x) == find(y);
+    }
+    bool F(int x) {
+        return f[find(x)];
+    }
+    int size(int x) {
+        return p[find(x)];
+    }
+    int E(int x) {
+        return e[find(x)];
+    }
+};
+
+inline void solve() {
+    int n, m;
+    std::cin >> n >> m;
+    DSU dsu(n);
+    for (int i = 1; i <= m; i++) {
+        int x, y;
+        std::cin >> x >> y;
+        dsu.merge(x, y);
+    }
+    bool flag = true;
+    std::vector<int> cnt;
+    int ans = 0;
+    for (int i = 1; i <= n; i++) {
+        if (dsu.fa[i] == i) {
+            int res = (dsu.size(i) * (dsu.size(i) - 1)) / 2;
+            if (res != dsu.E(i)) {
+                flag = false;
+                ans += res - dsu.E(i);
+            } else {
+                cnt.push_back(dsu.size(i));
+            }
+        }
+    }
+    if (flag) {
+        std::sort(cnt.begin(), cnt.end());
+        std::cout << cnt[0] * cnt[1] << endl;
+    } else {
+        std::cout << ans << endl;
+    }
 }
 signed main() {
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
     std::cout.tie(nullptr);
     int t = 1;
-    //std:: cin >> t;
+    // std:: cin >> t;
     while (t--) solve();
     return 0;
 }
