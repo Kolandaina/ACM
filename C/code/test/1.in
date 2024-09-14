@@ -1,2 +1,14 @@
-20
-RLURDDLRULUDUDLRULR
+I am writing description for algorithm questions, these algorithm questions are from leetcode. Each of them already have a description but I would like to rewrite them and follow the rules below: ​
+1. do not change the meaning of the description ​
+2. update wording so they don't look like the same, I try to avoid plagiarism ​
+3. keep wording precise and simple I need both chinese and english version​
+4. If there are any examples in the description, please make a new one.
+
+We have n chips, where the position of the ith chip is position[i].
+
+We need to move all the chips to the same position. In one step, we can change the position of the ith chip from position[i] to:
+
+position[i] + 2 or position[i] - 2 with cost = 0.
+position[i] + 1 or position[i] - 1 with cost = 1.
+
+Return the minimum cost needed to move all the chips to the same position.
