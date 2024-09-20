@@ -3,20 +3,20 @@ import java.util.Scanner;
 public class test {
     public static void solve() {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[] a = new int[n + 1];
-        int[] b = new int[m + 1];
-        for (int i = 1; i <= n; i++) {
-            a[i] = sc.nextInt();
+        int maximun_value, maximum_index, search_cost, n;
+        int[] arr = new int[10];
+        maximun_value = -1;
+        maximum_index = -1;
+        search_cost = 0;
+        n = arr.length();
+        for (int i = 0; i < n; i++) {
+            if (maximun_value < arr[i]) {
+                maximun_value = arr[i];
+                maximum_index = i;
+                search_cost = search_cost + 1;
+            }
         }
-        for (int i = 1; i <= m; i++) {
-            b[i] = sc.nextInt();
-        }
-        if (n == 1) {
-            System.out.println(a[1] + b[1]);
-            return;
-        }
+        System.out.println(maximum_index);
 
     }
 

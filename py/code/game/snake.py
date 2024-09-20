@@ -2,41 +2,38 @@ import random
 import sys
 import time
 from collections import deque
+from typing import Tuple, List
 
 import pygame
 from pygame.locals import *
 
 # 屏幕宽度和高度
-Screen_Height = 480
-Screen_Width = 600
+Screen_Height: int = 480
+Screen_Width: int = 600
 
 # 方格大小和线条宽度
-Size = 20
-Line_Width = 1
+Size: int = 20
+Line_Width: int = 1
 
 # 游戏区域范围
-Area_x = (0, Screen_Width // Size - 1)
-Area_y = (2, Screen_Height // Size - 1)
+Area_x: tuple[int, int] = (0, Screen_Width // Size - 1)
+Area_y: tuple[int, int] = (2, Screen_Height // Size - 1)
 
 # 食物样式列表，包括得分和颜色
-Food_Style_List = [(10, (255, 100, 100)),
-                   (20, (100, 255, 100)), (30, (100, 100, 255))]
+Food_Style_List: list[tuple[int, tuple[int, int, int]]] = [(10, (255, 100, 100)),
+                                                           (20, (100, 255, 100)), (30, (100, 100, 255))]
 
 # 颜色定义
-Light = (100, 100, 100)
-Dark = (200, 200, 200)
-Black = (0, 0, 0)
-Red = (200, 30, 30)
-Back_Ground = (40, 40, 60)
-
-# 绘制文本函数
+Light: tuple[int, int, int] = (100, 100, 100)
+Dark: tuple[int, int, int] = (200, 200, 200)
+Black: tuple[int, int, int] = (0, 0, 0)
+Red: tuple[int, int, int] = (200, 30, 30)
+Back_Ground: tuple[int, int, int] = (40, 40, 60)
 
 
 def Print_Txt(screen, font, x, y, text, fcolor=(255, 255, 255)):
     Text = font.render(text, True, fcolor)
     screen.blit(Text, (x, y))
-
-# 初始化蛇的位置
 
 
 def init_snake():
@@ -45,6 +42,7 @@ def init_snake():
     snake.append((1, Area_y[0]))
     snake.append((0, Area_y[0]))
     return snake
+
 
 # 创建食物
 
@@ -57,11 +55,13 @@ def Creat_Food(snake):
         food_y = random.randint(Area_y[0], Area_y[1])
     return food_x, food_y
 
+
 # 随机选择食物样式
 
 
 def Food_Style():
     return Food_Style_List[random.randint(0, 2)]
+
 
 # 游戏主函数
 
@@ -146,7 +146,8 @@ def main():
                         food = Creat_Food(snake)  # 创建新的食物
                         food_style = Food_Style()  # 随机选择新的食物样式
                     else:
-                        if Area_x[0] <= next_s[0] <= Area_x[1] and Area_y[0] <= next_s[1] <= Area_y[1] and next_s not in snake:
+                        if Area_x[0] <= next_s[0] <= Area_x[1] and Area_y[0] <= next_s[1] <= Area_y[
+                            1] and next_s not in snake:
                             snake.appendleft(next_s)  # 蛇继续移动
                             snake.pop()
                         else:
