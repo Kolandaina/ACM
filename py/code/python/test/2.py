@@ -100,7 +100,7 @@ class SortedList:
         values = sorted(iterable)
         self._len = _len = len(values)
         self._load = _load
-        self._lists = _lists = [values[i : i + _load] for i in range(0, _len, _load)]
+        self._lists = _lists = [values[i: i + _load] for i in range(0, _len, _load)]
         self._list_lens = [len(_list) for _list in _lists]
         self._mins = [_list[0] for _list in _lists]
         self._fen_tree = []
@@ -361,7 +361,7 @@ def factors(n):
     return set(
         reduce(
             list.__add__,
-            ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0),
+            ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0),
         )
     )
 
@@ -448,75 +448,6 @@ class MergeFind:
         return self.num_sets
 
 
-def lcm(a, b):
-    return abs((a // gcd(a, b)) * b)
-
-
-#
-# to find factorial and ncr
-# tot = 200005
-# mod = 10**9 + 7
-# fac = [1, 1]
-# finv = [1, 1]
-# inv = [0, 1]
-#
-# for i in range(2, tot + 1):
-#     fac.append((fac[-1] * i) % mod)
-#     inv.append(mod - (inv[mod % i] * (mod // i) % mod))
-#     finv.append(finv[-1] * inv[-1] % mod)
-
-
-def comb(n, r):
-    if n < r:
-        return 0
-    else:
-        return fac[n] * (finv[r] * finv[n - r] % mod) % mod
-
-
-def inp():
-    return sys.stdin.readline().rstrip("\r\n")  # for fast input
-
-
-def out(var):
-    sys.stdout.write(str(var))  # for fast output, always take string
-
-
-def lis():
-    return list(map(int, inp().split()))
-
-
-def stringlis():
-    return list(map(str, inp().split()))
-
-
-def sep():
-    return map(int, inp().split())
-
-
-def strsep():
-    return map(str, inp().split())
-
-
-def fsep():
-    return map(float, inp().split())
-
-
-def nextline():
-    out("\n")  # as stdout.write always print sring.
-
-
-def arr1d(n, v):
-    return [v] * n
-
-
-def arr2d(n, m, v):
-    return [[v] * m for _ in range(n)]
-
-
-def arr3d(n, m, p, v):
-    return [[[v] * p for _ in range(m)] for i in range(n)]
-
-
 def solve():
     n = N()
     weigth = lis()
@@ -548,12 +479,4 @@ def solve():
     print(*ans)
 
 
-# solve()
 testcase(int(inp()))
-
-# 5
-# 3 6
-# 5 10
-# 4 3
-# 2 1
-# 1 3

@@ -1,32 +1,37 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class test {
-    public static void solve() {
-        Scanner sc = new Scanner(System.in);
-        int maximun_value, maximum_index, search_cost, n;
-        int[] arr = new int[10];
-        maximun_value = -1;
-        maximum_index = -1;
-        search_cost = 0;
-        n = arr.length();
-        for (int i = 0; i < n; i++) {
-            if (maximun_value < arr[i]) {
-                maximun_value = arr[i];
-                maximum_index = i;
-                search_cost = search_cost + 1;
+    class Solution {
+        public List<String> buildArray(int[] target, int n) {
+            List<String> ans = new ArrayList<>();
+            for (int i = 0; i < target.length; i++) {
+                if (i == 0) {
+                    int timesPush = target[i] - 1;
+                    for (int j = 0; j < timesPush; j++) {
+                        ans.add("Push");
+                        ans.add("Pop");
+                    }
+                    ans.add("Push");
+                } else {
+                    int diff = target[i] - target[i - 1];
+                    int timesPush = diff - 1;
+                    for (int j = 0; j < timesPush; j++) {
+                        ans.add("Push");
+                        ans.add("Pop");
+                    }
+                    ans.add("Push");
+                }
             }
+            ans.add("Push");
+            ans.add("Pop");
+            return ans;
         }
-        System.out.println(maximum_index);
-
     }
 
     public static void main(String[] args) {
-        int t = 1;
-//        Scanner sc = new Scanner(System.in);
-//        t=sc.nextInt();
-        while (t > 0) {
-            solve();
-            t--;
-        }
+        Solution solution = new test().new Solution();
+        int[] target = {1, 3};
+        System.out.println(solution.buildArray(target, 3));
     }
 }

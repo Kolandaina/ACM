@@ -1,22 +1,53 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TemplateCustom {
     public static final String OUTPUT_FILENAME = "compareResult.txt"; //文件名 不要改
+
     /**
      * 自定义对比函数, 下面是每行对比，特殊情况，可以重新下面对比函数
-     * @param outputLine 用户输出结果
-     * @param expectLine 预期结果
-     * @param compareResultFile   对比结果输出文件
+     *
+     * @param outputLine        用户输出结果
+     * @param expectLine        预期结果
+     * @param compareResultFile 对比结果输出文件
      */
     private static void compare(String outputLine, String expectLine, FileOutputStream compareResultFile) throws IOException {
-        outputLine = outputLine.trim();
-        expectLine = expectLine.trim();
-        if (outputLine.equals(expectLine)) {
-            compareResultFile.write(("1").getBytes());
+        String[] expectedOperations = expectLine.trim().replaceAll("[\\[\\],]", "").split("\\s+");
+        String[] outputOperations = outputLine.trim().replaceAll("[\\[\\],]", "").split("\\s+");
+
+        // 模拟执行预期的操作
+        List<Integer> expectedArray = new ArrayList<>();
+        int current = 1;
+        for (String operation : expectedOperations) {
+            if (operation.equals("Push")) {
+                expectedArray.add(current);
+                current++;
+            } else if (operation.equals("Pop")) {
+                expectedArray.remove(expectedArray.size() - 1);
+            }
+        }
+
+        // 模拟执行用户输出的操作
+        List<Integer> outputArray = new ArrayList<>();
+        current = 1;
+        for (String operation : outputOperations) {
+            if (operation.equals("Push")) {
+                outputArray.add(current);
+                current++;
+            } else if (operation.equals("Pop")) {
+                outputArray.remove(outputArray.size() - 1);
+            }
+        }
+
+        // 比较两个数组是否相等
+        if (expectedArray.equals(outputArray)) {
+            compareResultFile.write(("1").getBytes());  // 匹配
         } else {
-            compareResultFile.write(("0").getBytes());
+            compareResultFile.write(("0").getBytes());  // 不匹配
         }
     }
+
     public static void main(String[] args) throws IOException {
         String submissionId = args[0]; //code 执行的任务id
         String outputFileName = args[1];//用户代码执行后的结果
