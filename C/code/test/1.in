@@ -1,9 +1,0 @@
-I am writing description for algorithm questions, these algorithm questions are from leetcode. Each of them already have a description but I would like to rewrite them and follow the rules below: ​
-1. do not change the meaning of the description ​
-2. update wording so they don't look like the same, I try to avoid plagiarism ​
-3. keep wording precise and simple I need both chinese and english version​
-4. If there are any examples in the description, please make a new one.
-
-Given a string s, return all the palindromic permutations (without duplicates) of it.
-
-You may return the answer in any order. If s has no palindromic permutation, return an empty list.

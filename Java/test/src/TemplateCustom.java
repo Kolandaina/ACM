@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class TemplateCustom {
     public static final String OUTPUT_FILENAME = "compareResult.txt"; //文件名 不要改
-
+    
     /**
      * 自定义对比函数, 下面是每行对比，特殊情况，可以重新下面对比函数
      *
