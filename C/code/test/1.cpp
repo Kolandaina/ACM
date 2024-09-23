@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 #include<functional>
-#define int long long
+//#define int long long
 #define endl "\n"
 const int N = 2e5 + 10;
 const int mod = 1e9 + 7;

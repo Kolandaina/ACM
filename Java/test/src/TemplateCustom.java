@@ -1,6 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class TemplateCustom {
     public static final String OUTPUT_FILENAME = "compareResult.txt"; //文件名 不要改
@@ -9,43 +8,38 @@ public class TemplateCustom {
      * 自定义对比函数, 下面是每行对比，特殊情况，可以重新下面对比函数
      *
      * @param outputLine        用户输出结果
-     * @param expectLine        预期结果
+     * @param expectLine        预期结果a
      * @param compareResultFile 对比结果输出文件
      */
     private static void compare(String outputLine, String expectLine, FileOutputStream compareResultFile) throws IOException {
-        String[] expectedOperations = expectLine.trim().replaceAll("[\\[\\],]", "").split("\\s+");
-        String[] outputOperations = outputLine.trim().replaceAll("[\\[\\],]", "").split("\\s+");
+        // 去除前后的空格并去掉首尾的方括号
+        outputLine = outputLine.trim().replaceAll("[\\[\\]]", "");
+        expectLine = expectLine.trim().replaceAll("[\\[\\]]", "");
 
-        // 模拟执行预期的操作
-        List<Integer> expectedArray = new ArrayList<>();
-        int current = 1;
-        for (String operation : expectedOperations) {
-            if (operation.equals("Push")) {
-                expectedArray.add(current);
-                current++;
-            } else if (operation.equals("Pop")) {
-                expectedArray.remove(expectedArray.size() - 1);
+        // 按逗号分割成数组
+        String[] outputArray = outputLine.split(",\\s*");
+        String[] expectArray = expectLine.split(",\\s*");
+
+        // 按字典序排序
+        Arrays.sort(outputArray);
+        Arrays.sort(expectArray);
+
+        // 判断长度是否相同
+        if (outputArray.length != expectArray.length) {
+            compareResultFile.write(("0").getBytes()); // 长度不一致，输出0
+            return;
+        }
+
+        // 对比每一个对应的字符串是否相同
+        for (int i = 0; i < outputArray.length; i++) {
+            if (!outputArray[i].equals(expectArray[i])) {
+                compareResultFile.write(("0").getBytes()); // 有不同的字符串，输出0
+                return;
             }
         }
 
-        // 模拟执行用户输出的操作
-        List<Integer> outputArray = new ArrayList<>();
-        current = 1;
-        for (String operation : outputOperations) {
-            if (operation.equals("Push")) {
-                outputArray.add(current);
-                current++;
-            } else if (operation.equals("Pop")) {
-                outputArray.remove(outputArray.size() - 1);
-            }
-        }
-
-        // 比较两个数组是否相等
-        if (expectedArray.equals(outputArray)) {
-            compareResultFile.write(("1").getBytes());  // 匹配
-        } else {
-            compareResultFile.write(("0").getBytes());  // 不匹配
-        }
+        // 所有比较通过，输出1
+        compareResultFile.write(("1").getBytes());
     }
 
     public static void main(String[] args) throws IOException {
